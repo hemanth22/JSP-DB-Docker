@@ -1,0 +1,7 @@
+version: '3.2'
+
+services:
+    app:
+        image: bitroid/jsp-db-docker:latest
+        ports:
+            - "8888:8080"
