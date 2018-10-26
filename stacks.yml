@@ -2,6 +2,6 @@ version: '3.7'
 
 services:
     app:
-        image: jspwithdb_dbjsp:latest
+        image: jspdbdocker_dbjsp:latest
         ports:
             - "8888:8080"
