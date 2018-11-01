@@ -1,4 +1,4 @@
-<%@ page import="java.sql.*" %>
+<%@page import="java.sql.*" %>
 <%
 Properties p=new java.util.Properties();
 		p.load(new FileInputStream("Db.prop"));

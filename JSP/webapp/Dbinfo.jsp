@@ -1,9 +1,9 @@
-<%@ page import="java.sql.*" %>
+<%@page import="java.sql.*" %>
 <%
-   String table=request.getParameter("emp");
+   String table=request.getParameter("tab");
    try
    { Class.forName("oracle.jdbc.driver.OracleDriver");
-     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","scott","tiger");
+     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:pdborcl","sys","Hemanth22");
 
 	 Statement st=con.createStatement();
 
