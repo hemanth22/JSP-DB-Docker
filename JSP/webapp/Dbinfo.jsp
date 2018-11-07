@@ -1,13 +1,13 @@
-<%@page import="java.sql.*" %>
+<%@ page import="java.sql.*" %>
 <%
-   String table=request.getParameter("tab");
+   String table=request.getParameter("TAB");
    try
    { Class.forName("oracle.jdbc.driver.OracleDriver");
-     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:pdborcl","sys","Hemanth22");
+     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","Hemanth22");
 
 	 Statement st=con.createStatement();
 
-		   if(st.execute("SELECT * from "+table))
+		   if(st.execute("SELECT * from tab"))
 	          {  ResultSet rs=st.getResultSet();
 		         ResultSetMetaData rsmd=rs.getMetaData();
 				 int nc=rsmd.getColumnCount();
