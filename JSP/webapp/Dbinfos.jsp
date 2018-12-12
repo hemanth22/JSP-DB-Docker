@@ -3,7 +3,7 @@
    String table=request.getParameter("TAB");
    try
    { Class.forName("oracle.jdbc.driver.OracleDriver");
-     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//127.0.0.1:1521/xe","system","oracle");
+     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@PDBORCL","scott","tiger");
 
 	 Statement st=con.createStatement();
 

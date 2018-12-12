@@ -1,13 +1,12 @@
 <%@ page import="java.sql.*" %>
 <%
-   String table=request.getParameter("TAB");
+
    try
    { Class.forName("oracle.jdbc.driver.OracleDriver");
-     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//127.0.0.1:1521/xe","system","oracle");
-
+     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//192.168.0.100:1521/PDBORCL","scott","tiger");
 	 Statement st=con.createStatement();
 
-		   if(st.execute("SELECT * from tab"))
+		   if(st.execute("SELECT * from EMP"))
 	          {  ResultSet rs=st.getResultSet();
 		         ResultSetMetaData rsmd=rs.getMetaData();
 				 int nc=rsmd.getColumnCount();

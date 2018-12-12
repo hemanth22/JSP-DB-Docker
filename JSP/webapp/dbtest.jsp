@@ -1,9 +1,8 @@
 <%@page import="java.sql.*" %>
 <%
-   String table=request.getParameter("tab");
    try
    { Class.forName("oracle.jdbc.driver.OracleDriver");
-     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:pdborcl","scott","tiger");
+     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//192.168.0.100:1521/PDBORCL","scott","tiger");
 
 
      		DatabaseMetaData dbmd=con.getMetaData();
